@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../../images/favicon.png" type="image/x-icon">
-<title>Input Data Diri | SMA NEGERI 2 TARUNA BHAYANGKARA JAWA TIMUR</title>
-<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  .fullscreen-iframe {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; /* Hapus border */
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopUp ML Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="script.js"></script>
 </head>
 <body>
-<iframe class="fullscreen-iframe" src="https://script.google.com/macros/s/AKfycbyzYwbVUSzlK1Ri5Reh7TGpozUyav0y4XvOoQdneLzbohjqFbT91Mj_25fEjAOmfaX9/exec"></iframe>
+
+    <h1>Welcome to TopUp ML Store</h1>
+    <p>Beli Diamond ML dengan harga murah dan selamat!</p>
+
+    <button id="installBtn">Install App</button>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/sw.js")
+                .then(() => console.log("Service Worker registered!"))
+                .catch(err => console.log("Service Worker failed:", err));
+        }
+    </script>
+
 </body>
 </html>
